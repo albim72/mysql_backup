@@ -1,0 +1,60 @@
+CREATE DATABASE  IF NOT EXISTS `garden` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `garden`;
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
+--
+-- Host: localhost    Database: garden
+-- ------------------------------------------------------
+-- Server version	8.0.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `klienci`
+--
+
+DROP TABLE IF EXISTS `klienci`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `klienci` (
+  `IDKlienta` int NOT NULL,
+  `Imie` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `Nazwisko` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `Adres` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `Miasto` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `Region` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `KodPocztowy` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `Kraj` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `NrTelefonu` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  PRIMARY KEY (`IDKlienta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `klienci`
+--
+
+LOCK TABLES `klienci` WRITE;
+/*!40000 ALTER TABLE `klienci` DISABLE KEYS */;
+INSERT INTO `klienci` VALUES (1,'Mike','Tiano','5540 Rosebud Place','Victoria','BC','V7Y 1Y1','Canada','(604) 555-0197'),(2,'Samantha','Smith','74 S. Western Dr.','Seattle','WA','88188','USA','(206) 555-0100'),(3,'Carol','Philips','2222 Montrose Ct.','Snohomish','WA','88291','USA','(360) 555-0111'),(4,'Sameer A.','Tejani','1900 Oak St.','Vancouver','BC','V5H 1L7','Canada','(604) 555-0199'),(5,'Scott','Gode','612 E. 2nd','Pocatello','ID','73204','USA','(208) 555-0161'),(6,'Jon','Morris','490 Fulton Dr.','Vancouver','BC','V4T 2A2','Canada','(604) 555-0121'),(7,'Parul','Manek','77 Olive Ave.','Provo','UT','74606','USA','(801) 555-0130'),(8,'Pat','Coleman','876 Western Ave.','Seattle','WA','88119','USA','(206) 555-0179'),(9,'Jim','Glynn','12 Linden Terrace','Walla Walla','WA','89362','USA','(509) 555-0162'),(10,'Steve','Masters','300 Park Avenue #1301','Seattle','WA','88121','USA','(206) 555-0128'),(11,'John','Peoples','78 Van Houten S.','Redmond','WA','88053','USA','(425) 555-0112'),(12,'Patrick','Sands','98 N. Hyde St.','San Francisco','CA','84140','USA','(415) 555-0104'),(13,'Kevin','Kennedy','566 Queen Anne Way','Redmond','WA','88053','USA','(206) 555-0140'),(14,'Karan','Khanna','401 Rodeo Dr.','Auburn','WA','88001','USA','(253) 555-0139'),(15,'Jose','Lugo','23 Tsawassen Blvd.','Tsawassen','BC','V6E 4S8','Canada','(604) 555-0132'),(16,'Shane','Kim','33 Hilo Loop SW','Kirkland','WA','88032','USA','(425) 555-0138'),(17,'Rob','Young','231 N. Ukiah Rd.','Aloha','OR','87006','USA','(503) 555-0110'),(18,'Prasanna','Samarawickrama','17331 Fairhaven St.','Seattle','WA','88136','USA','(206) 555-0105'),(19,'David','Pelton','193 Upper Mountain Ave.','Monroe','WA','88272','USA','(360) 555-0113'),(20,'Jim','Wilson','99 18th St. N.','Seattle','WA','88133','USA','(206) 555-0190'),(21,'Roland','Hofmann','42 El Camino Dr.','Seattle','WA','88108','USA','(425) 555-0153'),(22,'Randall','Boseman','55 Grizzly Peak Rd.','Butte','MT','49707','USA','(406) 555-0186'),(23,'Garrett','Young','98 Shoemaker Dr.','Kirkland','WA','88033','USA','(425) 555-0188'),(24,'Kathie','Flood','8887 Western Ave.','Glendale','CA','81203','USA','(713) 555-0169'),(25,'Reed','Koch','4568 Spaulding Ave. N.','Seattle','WA','88103','USA','(206) 555-0136'),(26,'Stephen Yuan','Jiang','7316 Taylor Landing Rd.','Duvall','WA','88019','USA','(425) 555-0146'),(27,'Chris','Ashton','89 Cedar Way','Redmond','WA','88052','USA','(425) 555-0191'),(28,'Ram','Thirunavukkarasu','27 Christopher St.','Seattle','WA','88155','USA','(206) 555-0198'),(29,'Pilar','Ackerman','8808 Backbay St.','Sidney','WA','88004','Canada','(425) 555-0194'),(30,'Tsvi','Reiter','98 Bitter Creek Rd.','Kirkland','WA','88032','USA','(425) 555-0106'),(31,'Joachim','Seidler','9308 Dartridge Ave.','San Francisco','CA','84167','USA','(415) 555-0103'),(32,'Terry','Adams','1932 52nd Ave.','Seattle','BC','V4T 1Y9','Canada','(604) 555-0193'),(33,'Carole','Poland','10 Pepper Dr.','San Jose','CA','85111','USA','(408) 555-0109'),(34,'Ted','Bremer','311 87th Pl.','Beaverton','OR','87008','USA','(503) 555-0185'),(35,'Fukiko','Ogisu','978 Carnegie Ave.','Seattle','WA','88146','USA','(206) 555-0116'),(36,'Richard','Lum','187 Suffolk Ln.','Boise','ID','73704','USA','(208) 555-0131'),(37,'Chris','Gray','48 Aurora Hwy.','Seattle','WA','88103','USA','(206) 555-0160'),(38,'Peter','Houston','11 Skyline Blvd.','Kirkland','WA','88033','USA','(425) 555-0148'),(39,'Qin','Hong','234 Samuel Pl.','Carnation','WA','88014','USA','(425) 555-0150'),(40,'Luciana','Ramos','12 Juanita Ln.','Helena','MT','49624','USA','(406) 555-0107'),(41,'Lori','Kane','1002 Green St.','Granite Falls','WA','88252','USA','(360) 555-0143'),(42,'Ken','Myer','7320 Edwards Ave.','Vancouver','BC','V5J 2G3','Canada','(604) 555-0120'),(43,'Chris','Cannon','89 W. Hilltop Dr.','Palo Alto','CA','84306','USA','(415) 555-0182'),(44,'Neil','Charney','1842 10th Avenue','Sidney','BC','V7L 1L3','Canada','(604) 555-0181'),(45,'Eric','Lang','991 S. Mississippi Rd.','Bothell','WA','88011','USA','(206) 555-0134'),(46,'Sydney','Higa','72 West St.','Portland','OR','87201','USA','(503) 555-0156'),(47,'Don','Funk','1815 Yolo St.','Seattle','WA','88117','USA','(425) 555-0166'),(48,'Kendall','Keil','17604 NW 43rd Ave.','Seattle','WA','88107','USA','(206) 555-0142'),(49,'Sunil','Koduri','1522 Ballard Rd.','Seattle','WA','88117','USA','(206) 555-0135'),(50,'Bob','Kelly','6 Cranbrook Hollow','Duvall','WA','88019','USA','(425) 555-0141'),(51,'David','Johnson','9878 Jefferson Circle','Seattle','WA','88144','USA','(425) 555-0145'),(52,'Roger','Van Houten','6565 Bentwood Circle','Redmond','WA','88052','USA','(425) 555-0194'),(53,'Tony','Wang','87 Pauline Dr.','Seattle','WA','88125','USA','(206) 555-0191'),(54,'Jo','Berry','407 Sunny Way','Kirkland','WA','88053','USA','(425) 555-0187'),(55,'David','Campbell','22 Market St.','San Francisco','CA','84112','USA','(415) 555-0183'),(56,'Scott','Culp','14 E. University Way','Seattle','WA','88115','USA','(206) 555-0176'),(57,'Tad','Orman','44 Dwight Ct.','Seattle','WA','88133','USA','(206) 555-0115'),(58,'Shirleen H.','Travers','46 E. Orange St.','Bellevue','WA','88004','USA','(425) 555-0195'),(59,'Holly','Holt','18 Canyon Rd.','Newcastle','WA','88056','USA','(425) 555-0151'),(60,'Molly','Clark','785 Beale St.','Sidney','BC','V7L 5A6','Canada','(604) 555-0180'),(61,'Andrew R.','Hill','89 Jefferson Way, Suite 2','Portland','OR','87210','USA','(503) 555-0155'),(62,'Ron','Gabel','507 - 20th Ave. E., Apt. 2A','Seattle','WA','88122','USA','(206) 555-0165'),(63,'Michael','Zwilling','76 Kings Way','Fall City','WA','88024','USA','(425) 555-0112'),(64,'Scott','Oveson','78 Miller St.','Seattle','WA','88158','USA','(206) 555-0114'),(65,'David','Simpson','45 Park St.','San Jose','CA','85123','USA','(408) 555-0102'),(66,'Mike','Danseglio','55 Newton','Seattle','WA','88102','USA','(206) 555-0174'),(67,'Kevin F.','Browne','666 Fords Landing','Seattle','WA','88121','USA','(206) 555-0184'),(68,'Gail A.','Erickson','908 W. Capital Way','Tacoma','WA','88405','USA','(253) 555-0172'),(70,'John','Kane','4110 Old Redmond Rd.','Redmond','WA','88052','USA','(206) 555-0144'),(71,'Dragan','Tomic','78 S. Terrain St.','Seattle','WA','88148','USA','(206) 555-0196'),(72,'Tommy','Hartono','66 Cactus St.','Seattle','WA','88118','USA','(206) 555-0159'),(73,'Martin','Bankov','78 Riverside Dr.','Woodinville','WA','88072','USA','(425) 555-0190'),(74,'Claire','O\'Donnell','76 Piney Ridge','Redmond','WA','88052','USA','(425) 555-0117'),(75,'Karin','Zimprich','472 Lexington Ave.','Carnation','WA','88014','USA','(425) 555-0111'),(77,'Jon','Ganio','45 Winding Wood Blvd.','Seattle','WA','88103','USA','(206) 555-0164'),(78,'Qiang','Wang','98 Forrest Way','Redmond','WA','88053','USA','(425) 555-0192'),(79,'Michael','Allen','130 17th St.','Vancouver','BC','V4T 1Y9','Canada','(604) 555-0192'),(80,'Steven B.','Levy','507 20th Ave. E.','Seattle','WA','88102','USA','(206) 555-0133'),(81,'Guido','Pica','33 Washington Dr.','Seattle','WA','88166','USA','(206) 555-0110'),(82,'Garth','Fort','23 W. 48th St. #2','Redmond','WA','88053','USA','(425) 555-0168'),(83,'Brian','Cox','14 S. Elm Dr.','Moscow','ID','73844','USA','(208) 555-0177'),(84,'Sergey','Klimov','333 Baseline Ave.','Kenmore','WA','88028','USA','(425) 555-0137'),(85,'Scott','Mitchell','47 Eucalyptus Dr.','Escondido','CA','82029','USA','(619) 555-0122'),(86,'Chad','Niswonger','3300 Colorado Blvd.','Bellevue','WA','88005','USA','(425) 555-0118'),(87,'Guy','Gilbert','79 S. Wyatt St.','Clinton','WA','88236','USA','(360) 555-0163'),(88,'JianShuo','Wang','3319 Hillside Dr.','Vancouver','BC','V5K 2V6','Canada','(604) 555-0193'),(89,'Michael','Holm','4220 Main St.','Bellevue','WA','88006','USA','(425) 555-0152'),(90,'Joseph','Matthews','96 Jefferson Loop','Loma Linda','CA','82350','USA','(209) 555-0127'),(91,'Helge','Hoeing','431 Freemont St.','Bellevue','WA','88005','USA','(425) 555-0154'),(92,'Modesto','Estrada','511 Lincoln Ave.','Burns','OR','87710','USA','(503) 555-0171'),(93,'Patricia','Doyle','1630 Hillcrest Way','Carmel Valley','CA','83924','USA','(408) 555-0173'),(94,'Gordon L.','Hee','115 Leary Wy.','Seattle','WA','88117','USA','(206) 555-0157'),(95,'Hanying','Feng','537 Orchard Ave.','Victoria','BC','V8C 3Z1','Canada','(604) 555-0170'),(96,'Sandra I.','Martinez','780 West Blvd.','Arlington','WA','88223','USA','(360) 555-0129'),(97,'Chris','McGurk','12 Pike St.','Everett','WA','88208','USA','(360) 555-0126'),(98,'Karen','Berg','PO Box 69','Yakima','WA','88902','USA','(509) 555-0188'),(99,'Mike','Nash','78 Roux Rd.','Seattle','WA','88124','USA','(206) 555-0119'),(100,'Nicole','Holliday','82 E. South Way','Seattle','WA','88122','USA','(206) 555-0149'),(101,'Ben','Miller','23 High Pass Dr.','Granada Hills','CA','81344','USA','(408) 555-0124'),(102,'Lola','Jacobsen','998 Kirk Rd.','Bellingham','WA','88227','USA','(360) 555-0147'),(103,'Jeff','Price','87 Prince St.','Seattle','WA','88199','USA','(206) 555-0108'),(104,'Frank','Miller','18 Elm St.','Tulalip','WA','88271','USA','(360) 555-0123'),(105,'Mark','Wistrom','722 Prospect Blvd.','Seattle','WA','88105','USA','(206) 555-0189'),(106,'Ryan','Danner','33 Neptune Circle','Langley','WA','88260','USA','(360) 555-0175'),(107,'Cecilia','Cornejo','778 Ancient Rd.','Bellevue','WA','88007','USA','(425) 555-0178'),(108,'Jeff','Smith','17 Wilken Rd.','La Conner','WA','88257','USA','(360) 555-0101'),(109,'Anne','Hellung-Larsen','City Center Plaza, 516 Main St.','Elgin','OR','87827','USA','(503) 555-0158'),(110,'Chris','Meyer','722 DaVinci Blvd.','Kirkland','WA','88033','USA','(425) 555-0125'),(111,'Paula','Bento','6778 Cypress Pkwy.','Oak Harbor','WA','88277','USA','(360) 555-0189');
+/*!40000 ALTER TABLE `klienci` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-12-04  9:12:20
